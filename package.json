@@ -1,0 +1,20 @@
+{
+  "name": "scrum-vision",
+  "version": "1.0.0",
+  "description": "A tracker/dashboard to keep track of all things Scrum",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmg2549/scrum-vision.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmg2549/scrum-vision/issues"
+  },
+  "homepage": "https://github.com/tmg2549/scrum-vision#readme"
+}
