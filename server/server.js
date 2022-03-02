@@ -11,9 +11,12 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', insertionController.insertSprint, (req, res) => {
-  return res.status(200).json({});
+  return res.status(200).json(res.locals.sprint);
 })
 
+// app.post('/role', insertionController.insertRole, (req, res) => {
+//   return res.status(200).json(res.locals.role);
+// })
 
 app.use('*', (req,res) => {
   res.sendStatus(404);
