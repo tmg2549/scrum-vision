@@ -10,13 +10,21 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.post('/', insertionController.insertSprint, (req, res) => {
+app.post('/sprint', insertionController.insertSprint, (req, res) => {
   return res.status(200).json(res.locals.sprint);
 })
 
-// app.post('/role', insertionController.insertRole, (req, res) => {
-//   return res.status(200).json(res.locals.role);
-// })
+app.post('/role', insertionController.insertRole, (req, res) => {
+  return res.status(200).json(res.locals.role);
+})
+
+app.post('/person', insertionController.insertPerson, (req, res) => {
+  return res.status(200).json(res.locals.person);
+})
+
+app.post('/product', insertionController.insertProduct, (req, res) => {
+  return res.status(200).json(res.locals.product);
+})
 
 app.use('*', (req,res) => {
   res.sendStatus(404);
