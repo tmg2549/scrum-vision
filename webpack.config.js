@@ -13,6 +13,12 @@ module.exports = {
       template: "./client/index.html",
     }),
   ],
+  devServer: {
+    port: 8080,
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  },
   resolve: {
     modules: [__dirname, "client", "node_modules"],
     extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],

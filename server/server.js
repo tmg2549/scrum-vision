@@ -8,14 +8,15 @@ const productRouter = require('./routes/productRouter');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use(express.static('./client'));
 
-app.get('/products-list', productsListController.getProductsList, (req, res) => {
+app.get('/api/products-list', productsListController.getProductsList, (req, res) => {
   return res.status(200).json(res.locals)
 });
 
 //dashboard
 //will need to fetch data about product, items, teams, people
-app.use('/product', productRouter)
+app.use('/api/product', productRouter)
 
 
 app.use('*', (req,res) => {
