@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/tmg2549/scrum-vision#readme",
   "dependencies": {
+    "axios": "^0.26.0",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
     "pg": "^8.7.3",
