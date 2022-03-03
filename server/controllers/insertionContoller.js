@@ -63,10 +63,10 @@ insertionController.insertPerson = async (req, res, next) => {
 //inserts a product into product table
 insertionController.insertProduct = async (req, res, next) => {
   try {
-    const { _id, name, category, description, product_goal, product_vision } = req.body;
-    const params = [ _id, name, category, description, product_goal, product_vision ];
-    const query = `INSERT INTO products(_id, name, category, description, product_goal, product_vision)
-                   VALUES($1, $2, $3, $4, $5, $6);`;
+    const { _id, name, category, description, product_goal} = req.body;
+    const params = [ _id, name, category, description, product_goal];
+    const query = `INSERT INTO products(_id, name, category, description, product_goal)
+                   VALUES($1, $2, $3, $4, $5);`;
     const result = await db.query(query, params)
     res.locals.product = result;
     return next();
