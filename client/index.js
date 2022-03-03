@@ -6,7 +6,7 @@ import store from './store';
 import styles from "./style.css";
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <App/>
   </Provider>,
   document.querySelector("#root")
