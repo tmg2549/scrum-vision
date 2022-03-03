@@ -14,3 +14,18 @@ export const loadProductsList = () => (dispatch) => {
     })
     .catch(console.error);
 };
+
+export const loadProductInfo = (event) => {
+  console.log(event)
+  axios.get('/api/product')
+    .then(({ data, status }) => {
+      console.log(data)
+      if (status === 200) {
+        return {
+          type: types.LOAD_PRODUCT_INFO,
+          payload: data
+        }
+      };
+    })
+    .catch(console.error);
+};

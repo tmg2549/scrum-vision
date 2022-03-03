@@ -1,9 +1,15 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import ListItem from '../components/ListItem'
+import * as actions from '../actions/actions.js';
 
 const mapStateToProps = state => ({
   productsList: state.products.productsList
+});
+
+const mapDispatchToProps = dispatch => ({
+  getProduct: (event) => dispatch(actions.loadProductInfo(event))
 });
 
 class NavbarContainer extends Component {
@@ -20,7 +26,7 @@ class NavbarContainer extends Component {
     })
     return (
       <div className="navbar-display">
-          <select name='productDropdown' id='productDropdown'>
+          <select name='productDropdown' id='productDropdown' onChange={this.props.getProduct}>
             <option value="">--Please choose an option--</option>
             {elementsMap}
           </select>
@@ -34,4 +40,4 @@ class NavbarContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, null)(NavbarContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(NavbarContainer);

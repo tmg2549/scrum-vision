@@ -14,10 +14,8 @@ const productsReducer = (state = initialState, action) => {
 
     case types.LOAD_PRODUCT_INFO:
       return {
-        ...state
-        // totalMarkets: action.payload.length,
-        // totalCards: action.payload.reduce((res, m) => res + m.cards, 0),
-        // marketList: action.payload,
+        ...state,
+        ...action.payload
       };
 
     default:
