@@ -2,10 +2,16 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const insertionController = require('./controllers/insertionContoller');
+const productsListController = require('./controllers/productsListController');
 const productRouter = require('./routes/productRouter');
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
+
+app.get('/products-list', productsListController.getProductsList, (req, res) => {
+  return res.status(200).json(res.locals)
+});
 
 //dashboard
 //will need to fetch data about product, items, teams, people
