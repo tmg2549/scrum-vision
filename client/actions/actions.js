@@ -8,7 +8,7 @@ export const loadProductsList = () => (dispatch) => {
       if (status === 200) {
         dispatch({
           type: types.LOAD_PRODUCTS_LIST,
-          payload: data
+          payload: data.products
         })
       };
     })
