@@ -16,8 +16,15 @@ export const loadProductsList = () => (dispatch) => {
 };
 
 export const loadProductInfo = (event) => {
-  console.log(event)
-  axios.get('/api/product')
+  let id;
+  for (const child of event.target.children){
+    if (child.value === event.target.value){
+      id = child.attributes.productid.value
+    }
+  }
+  id = parseInt(id)
+  const body = {id: id}
+  axios.get('/api/product', body)
     .then(({ data, status }) => {
       console.log(data)
       if (status === 200) {

@@ -1,14 +1,21 @@
-import { createStore, applyMiddleware } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import reducers from './reducers/index';
-import { loadProductsList, loadProductInfo } from './actions/actions';
+import { configureStore } from '@reduxjs/toolkit'
 
-const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
+export default configureStore({
+  reducer: {}
+})
 
-store.dispatch(loadProductsList());
+// import { createStore, applyMiddleware } from 'redux';
+// import { composeWithDevTools } from 'redux-devtools-extension';
+// import thunk from 'redux-thunk';
+// import reducers from './reducers/index';
+// import { loadProductsList, loadProductInfo } from './actions/actions';
 
-export default store;
+// const store = createStore(
+//   reducers,
+//   composeWithDevTools(applyMiddleware(thunk)),
+// );
+
+// store.dispatch(loadProductsList());
+
+// export default store;
+

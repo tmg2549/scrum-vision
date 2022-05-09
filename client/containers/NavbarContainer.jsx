@@ -25,13 +25,13 @@ class NavbarContainer extends Component {
       return (<ListItem key={`option${i}`} productinfo={element} />)
     })
     return (
-      <div className="navbar-display">
+      <div>
           <select name='productDropdown' id='productDropdown' onChange={this.props.getProduct}>
             <option value="">--Please choose an option--</option>
             {elementsMap}
           </select>
           <ul>
-              <li>Overview</li>
+              <li className='text-lime-600'>Overview</li>
               <li>Teams</li>
               <li>People</li>
           </ul>

@@ -6,7 +6,7 @@ const productController = {};
 productController.getProduct = async (req, res, next) => {
   try {
     const { id } = req.body;
-    const params = [ id ];
+    const params = [ id, firstname, lastname ];
     const query = `
     SELECT * FROM products
     WHERE _id = $1;`;
