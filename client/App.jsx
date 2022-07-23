@@ -6,11 +6,12 @@ import NavbarContainer from "./containers/NavbarContainer";
 
 const App = () => ( 
     // <HashRouter>
-        <div>
-            {/* <Counter/> */}
-            {/* <NavbarContainer /> */}
-            {/* <Route exact path="/view/" component={OverviewContainer}></Route> */}
+        <div className="bg-lime-700 text-orange-600 w-96 h-24">
+            Hello
         </div>
+            // {/* <Counter/> */}
+            // {/* <NavbarContainer /> */}
+            // {/* <Route exact path="/view/" component={OverviewContainer}></Route> */}
     // </HashRouter>
 );
 
