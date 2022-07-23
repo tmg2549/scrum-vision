@@ -7,7 +7,7 @@ import NavbarContainer from "./containers/NavbarContainer";
 const App = () => ( 
     // <HashRouter>
         <div>
-            <Counter/>
+            {/* <Counter/> */}
             {/* <NavbarContainer /> */}
             {/* <Route exact path="/view/" component={OverviewContainer}></Route> */}
         </div>
